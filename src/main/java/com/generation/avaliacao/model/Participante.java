@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 @Entity
 @Table(name = "tb_participante")
@@ -25,8 +25,8 @@ public class Participante{
 	@Size(min = 3, max = 50, message = "Tamanho incorreto, deverá conter no mínimo 3 e máximo 50 caracteres ")
 	private String nome;
 	
-	@DateTimeFormat(pattern = "dd/MM/yyyy") // verificar se altera logica do service
-	@NotBlank(message= "Data de nascimento é obrigatória")
+	//@DateTimeFormat(pattern = "dd/MM/yyyy") // verificar se altera logica do service
+	//@NotBlank(message= "Data de nascimento é obrigatória")
 	private LocalDate dataNasc;
 
 	@NotBlank(message = "Campo não pode ser nulo ou vazio")
@@ -35,7 +35,7 @@ public class Participante{
 	@NotBlank(message = "Campo não pode ser nulo ou vazio")
 	private String tipoCurso;
 	
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	//@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataCadastro = LocalDate.now(); //java.sql.Date(System.currentTimeMillis()); // assim que passar o objeto pela classe calcula data e hora
 	
 	

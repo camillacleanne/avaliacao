@@ -41,7 +41,7 @@ public class ParticipanteController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Participante> getById(@PathVariable long id) {
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+		return participanteService.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 
 	}
 
@@ -53,13 +53,13 @@ public class ParticipanteController {
 
 	@PutMapping
 	public ResponseEntity<Participante> put(@RequestBody Participante participante) {
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(participante));
+		return ResponseEntity.status(HttpStatus.OK).body(participanteService.save(participante));
 	}
 
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
-		repository.deleteById(id);
+		participanteService.deleteById(id);
 	}
 
 }
