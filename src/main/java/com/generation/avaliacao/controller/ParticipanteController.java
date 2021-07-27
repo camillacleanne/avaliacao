@@ -25,10 +25,12 @@ import com.generation.avaliacao.service.ParticipanteService;
 @RequestMapping("/participante")
 @CrossOrigin(value = "*", allowedHeaders = "*")
 public class ParticipanteController {
+
+	//para cada metodo criar um metodo no service para acrescentar a camada de regra
 	
 	@Autowired
-	private ParticipanteService participanteService; 
-	
+	private ParticipanteService participanteService;
+
 	@Autowired
 	private ParticipanteRepository repository;
 
@@ -42,10 +44,11 @@ public class ParticipanteController {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 
 	}
+
 //criar um getmapping para lançar a excessão
 	@PostMapping
 	public ResponseEntity<Participante> post(@RequestBody Participante participante) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(participante));
+		return ResponseEntity.status(HttpStatus.CREATED).body(participanteService.save(participante));
 	}
 
 	@PutMapping
