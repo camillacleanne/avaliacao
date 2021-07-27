@@ -4,7 +4,7 @@ Construindo uma Api Rest com Spring Boot, Mysql para facilitar o gerenciamento d
 Capaz de: Armazenar dados cadastrais de participantes como: nome, data de nascimento, periodo, data de cadastro que calcula automaticamente de acordo com a data inserida.
 
 ### PARA CRIAR O PROJETO
-Usei a IDE Spring Tool o para construir a API Rest com o auxilio da ferramenta Spring através do nhttps://start.spring.io/.
+Usei a IDE Spring Tool o para construir a API Rest com o auxilio da ferramenta Spring boot através do https://start.spring.io/.
 ### AMBIENTE DE DESENVOLVIMENTO
 1. Após clonar ou baixar o repositório 
 > https://github.com/camillacleanne/avaliacao
