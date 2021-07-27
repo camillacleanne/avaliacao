@@ -16,12 +16,12 @@ Através da URL com o metodo **POST**:
 > http://localhost:8080/participante
 Fazer a verificação da população dos dados em:
 Body>raw> JSON :
-{
+>{
     "nome":"Vitoria",
     "dataNasc": "2021-05-16",
     "periodo": "manhã",
     "tipoCurso": "EAD"
-}
+>}
 
 4. No **GET** validar o input
 5. A API não aceita cadastro de pessoas com idade maior de 18 anos.
